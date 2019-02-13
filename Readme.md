@@ -2,7 +2,9 @@
 
 1. put your php project in htdocs
 
-2. database server
+2. docker-compose up in root directory
+
+3. database server
 
 ```text
 server    : db
