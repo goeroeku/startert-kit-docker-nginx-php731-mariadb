@@ -20,10 +20,13 @@ services:
       - ./htdocs:/var/www/html
   db:
     container_name: laravel_db
-    image: yobasystems/alpine-mariadb
+    image: jbergstroem/mariadb-alpine
     ports:
       - "3306:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=homestead
+      - MYSQL_USER=homestead
+      - MYSQL_PASSWORD=secret
     volumes:
       - ./mysql:/var/lib/mysql
