@@ -69,3 +69,35 @@ localhost:9090
 ```text
 # php artisan migrate
 ```
+
+## Error
+
+### PDOException::("could not find driver")
+
+- Pastikan php, php pdo, php mysql, php pdo mysql sudah terinstall
+
+```text
+# php -m | grep mysql
+```
+
+- Jika belum muncul pdo mysql, install dahulu kemudian aktifkan modul tersebut pada file php.ini
+
+contoh lokasi file php.ini pada /etc/php/php.ini
+
+```text
+# vim /etc/php/php.ini
+```
+
+cari extension pdo_mysql, harusnya:
+
+```text
+;extension=pdo_mysql
+```
+
+hilangkan titik koma (;), sehingga menjadi
+
+```text
+extension=pdo_mysql
+```
+
+keluar dari vim dan jangan lupa simpan perubahan
